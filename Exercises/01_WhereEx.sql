@@ -26,7 +26,7 @@ WHERE CatOwner = 'Jake' OR CatHousehold = 'St. Germain'
 -- Extra details:
     -- Just pulling names (CatOwner) can cause the wrong info to come back. We would want a unique ID for the owner.
     -- Based on our DB architecture, the OwnerID info is only stored in another table.
-        -- A potentially better design would be to not include the CatOwner in the ClientCat table and just have a unique ID.
+        -- A potentially better design would be to not include the CatOwner (name) in the ClientCat table and just have a unique ID.
         -- The CatOwner could be shown by using a JOIN.
     -- Additionally, we could use the CatOwner and OwnerID that come in from the API call to find the CatHousehold and not hard code it.
 
