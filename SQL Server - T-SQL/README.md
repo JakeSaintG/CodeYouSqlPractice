@@ -1,4 +1,7 @@
 # CatDB
+## Note:
+This is the *original* version of the SQL Practice using scripts made for SQL Server (SQL Server Management Studio). For SQLite practice, head back to the root of the repo. If you have SQL Server on your machine and want to give these a shot, feel free!
+
 ## An intro to SQL and Practice
 - CatDB can be used to learn and practice basic SQL concepts.
 - This exercise is meant to be used in conjuction with the Code Louisville Software Development Level 2 Course.
