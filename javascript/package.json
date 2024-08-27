@@ -1,0 +1,11 @@
+{
+  "name": "js_sqlite_demo",
+  "version": "1.0.0",
+  "description": "Part of the SQLite Demo, this project allows a Web Track student to initialize and control the SQLite demo with the tools already at their disposal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "JakeSaintG",
+  "license": "ISC"
+}
