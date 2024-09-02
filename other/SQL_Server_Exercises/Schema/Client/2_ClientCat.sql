@@ -91,7 +91,7 @@ INSERT INTO Client.ClientCat
         'Kyoko',
         '5',
         'Jill',
-        'In-Laws',
+        'Jill''s House',
         'female',
         15,
         'Grey',

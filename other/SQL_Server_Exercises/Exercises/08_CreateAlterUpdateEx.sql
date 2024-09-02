@@ -57,7 +57,7 @@ Where CatHousehold = 'The Farm' -- If you don't have this in ClientCat, that's f
 
 UPDATE [CatDB].[Client].[ClientCat]
 SET VetID = '15369002732642'
-Where CatHousehold = 'In-Laws'
+Where CatHousehold = 'Jill''s House'
 
 UPDATE [CatDB].[Client].[ClientCat]
 SET VetID = '345668887533'
