@@ -100,7 +100,7 @@ VALUES
 ,('Marie','2716120e-8152-4dc2-a847-b2e4dd461dab','Adelaide Bonfamille','Aristocats','female',1,'White',NULL,NULL,'solid','Turkish Angora',DATE('now'))
 ,('Berlioz','df06de9d-9e2a-48c5-9cfc-9f4d17a0f107','Adelaide Bonfamille','Aristocats','female',1,'grey',NULL,NULL,'dark gray with lighter grey stomach','Turkish Angora',DATE('now'))
 ,('Toulouse','8b1eb9f2-a0fb-483e-a1b4-11784dc8c63f','Adelaide Bonfamille','Aristocats','female',1,'orange','cream',NULL,'orange with cream stomach','Turkish Angora',DATE('now'))
-,('Sassy','55c5e472-0d02-4909-a9a4-76f41576ed6e','Hope','Homeward','female',8,'black','cream','grey','black face, white chest, grey body','Himalayan',DATE('now'))
+,('Sassy','55c5e472-0d02-4909-a9a4-76f41576ed6e','Hope','Homeward','female',8,'black','cream','grey','black face, white chest, grey body','Himalayan','2024-05-23')
 ,('Louie','53610afe-5464-442c-9ba2-0ecef0e44180','Mia','Genovia''s Palace','male',20,'black','white',NULL,'tuxedo','domestic shorthair',DATE('now'));
 
 INSERT INTO CatOwner (OwnerNM, OwnerID, OwnerEmail, OwnerPhone, HouseholdNM)

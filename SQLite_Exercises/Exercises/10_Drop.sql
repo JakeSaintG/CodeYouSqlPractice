@@ -5,7 +5,6 @@ DROP TABLE CatBreed;
 DROP TABLE Veterinarian;
 DROP TABLE CatColor;
 
-
 /*
 Why would we want to DROP a table?
 - Sometimes, during activities like copying large piles of data, the fastest way to do it without a substantial 

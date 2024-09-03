@@ -1,6 +1,5 @@
 -- Create vet table VetNM, VetLocation, VetID, LastModifiedDTS
-CREATE TABLE Veterinarian
-(
+CREATE TABLE Veterinarian (
     VetNM TEXT NOT NULL
     ,VetID TEXT NOT NULL
     ,VetEmail TEXT NULL
@@ -8,8 +7,7 @@ CREATE TABLE Veterinarian
 );
 
 -- Let's add a few vets to the table.
-INSERT INTO Veterinarian
-(
+INSERT INTO Veterinarian (
     VetNM
     ,VetID
     ,VetEmail
@@ -40,9 +38,6 @@ VALUES
     ,'raph@example.com'
     ,5555555573
 );
-
-
-
 
 -- Now add a VetID column to ClientCat. Make it a big and make it nullable.
 ALTER TABLE ClientCat ADD VetID TEXT NULL;
@@ -80,19 +75,19 @@ JOIN CatOwner b ON a.CatOwner = b.OwnerNM
 JOIN Veterinarian v ON a.VetID = v.VetID;
 
 -- Now show everything you want from one table.
-SELECT a.CatNM,
-	   a.CatOwner,
-	   a.CatBreed
+SELECT a.CatNM
+	  ,a.CatOwner
+	  ,a.CatBreed
 FROM ClientCat a
 JOIN CatOwner b ON a.CatOwner = b.OwnerNM 
 JOIN Veterinarian v ON a.VetID = v.VetID;
 
 -- Add one more and then the last one for something that looks like this! Add some AS statements to make the result table look nice too.
-SELECT a.CatNM AS 'Name',
-	   a.CatOwner AS 'Owner',
-	   a.CatBreed AS 'Breed',
-	   b.OwnerPhone AS 'Client Phone',
-	   v.VetNM AS 'Vet Name'
+SELECT a.CatNM AS 'Name'
+	  ,a.CatOwner AS 'Owner'
+	  ,a.CatBreed AS 'Breed'
+	  ,b.OwnerPhone AS 'Client Phone'
+	  ,v.VetNM AS 'Vet Name'
 FROM ClientCat a
 JOIN CatOwner b ON a.CatOwner = b.OwnerNM 
 JOIN Veterinarian v ON a.VetID = v.VetID;

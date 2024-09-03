@@ -166,7 +166,7 @@ VALUES
     ,'grey'
     ,'black face, white chest, grey body'
     ,'Himalayan'
-    ,DATE('now')
+    ,'2024-05-23'
 ),
 (
     'Louie'

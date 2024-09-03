@@ -8,18 +8,18 @@ FROM ClientCat
 WHERE CatOwner = 'Jake';
 
 -- Let's trim that down a little.
-SELECT CatNM,
-	   CatSex,
-	   CatAge,
-	   CatBreed
+SELECT CatNM
+	  ,CatSex
+	  ,CatAge
+	  ,CatBreed
 FROM ClientCat
 WHERE CatOwner = 'Jake';
 
 -- Let's say that Jake wants to see all the cats in his household. Use OR to find cats owned by Jake or in the 'St. Germain' household.
-SELECT CatNM,
-	   CatSex,
-	   CatAge,
-	   CatBreed
+SELECT CatNM
+	  ,CatSex
+	  ,CatAge
+	  ,CatBreed
 FROM ClientCat
 WHERE CatOwner = 'Jake' OR CatHousehold = 'SaintG';
 

@@ -10,9 +10,9 @@ INNER JOIN CatBreed b ON a.CatBreed = b.BreedNM; -- Will only bring in details t
 
 -- Now narrow it down to show me a cat's hair length based on their breed.
 SELECT 
-	a.CatNM,
-	b.BreedNM,
-	b.HairLength
+	a.CatNM
+	,b.BreedNM
+	,b.HairLength
 FROM ClientCat a
 JOIN CatBreed b ON a.CatBreed = b.BreedNM;
 
