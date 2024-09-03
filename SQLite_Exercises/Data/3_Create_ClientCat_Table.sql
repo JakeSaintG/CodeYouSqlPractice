@@ -173,7 +173,7 @@ INSERT INTO ClientCat
         'Louie',
         '53610afe-5464-442c-9ba2-0ecef0e44180',
         'Mia',
-        'Genovia',
+        'Genovia''s Palace',
         'male',
         20,
         'black',

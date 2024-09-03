@@ -59,7 +59,7 @@ INSERT INTO [CatOwner]
 		'bf64060f-4f38-459d-b2d5-3b31359db238',
 		'mia.thermopolis@palace.ga',
 		5555555559,
-		'Genovia'
+		'Genovia''s Palace' -- Note! In order to use a ' character in a query, it must be escaped with another ' character. 
 	);
 
 SELECT * FROM CatOwner;

@@ -15,7 +15,7 @@ CREATE TABLE CatBreed (
 	Hypoallergenic INT NULL
 );
 
-INSERT INTO [CatBreed]
+INSERT INTO CatBreed
 (
     [BreedNM]
     ,[Size]
