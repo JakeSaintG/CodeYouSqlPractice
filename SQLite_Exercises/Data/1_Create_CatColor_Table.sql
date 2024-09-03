@@ -5,31 +5,16 @@ CREATE TABLE CatColor (
     ColorNM TEXT NOT NULL
 );
 
-INSERT INTO CatColor 
-(
+INSERT INTO CatColor (
 	ColorNM
 ) 
-    VALUES
-    (
-        'black'
-    ),
-    (
-        'white'
-    ),
-    (
-        'grey'
-    ),
-    (
-        'orange'
-    ),
-    (
-        'cream'
-    ),
-    (
-        'orange'
-    ),
-    (
-        'brown'
-    );
+VALUES
+('black')
+,('white')
+,('grey')
+,('orange')
+,('cream')
+,('orange')
+,('brown');
 
 SELECT * FROM CatColor;
