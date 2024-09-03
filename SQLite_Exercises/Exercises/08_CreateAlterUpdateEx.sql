@@ -42,9 +42,7 @@ VALUES
 );
 
 
--- TODO Won't work... will need to tear down the table and remake it
--- You decide later in the development process to add a Primary Key to the Veterinarian table. Use ALTER to add this CONSTRAINT.
-ALTER TABLE Client.Veterinarian ADD CONSTRAINT PK_Veterinarian PRIMARY KEY (VetNM, VetID);
+
 
 -- Now add a VetID column to ClientCat. Make it a big and make it nullable.
 ALTER TABLE ClientCat ADD VetID TEXT NULL;
