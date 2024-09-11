@@ -11,35 +11,35 @@
 */
 
 CREATE TABLE ClientCat (
-    CatNM TEXT NOT NULL
-    ,CatID TEXT NOT NULL
-    ,CatOwner TEXT NULL
-    ,CatHousehold TEXT NULL
-    ,CatSex TEXT NOT NULL
-    ,CatAge INT NULL
-    ,CatColorPrimary TEXT NULL
-    ,CatColorSecondary TEXT NULL
-    ,CatColorTertiary TEXT NULL
-    ,CatPattern TEXT
-    ,CatBreed TEXT
-    ,LastModifiedDTS TEXT NOT NULL
+    CatNM TEXT NOT NULL,
+    CatID TEXT NOT NULL,
+    CatOwner TEXT NULL,
+    CatHousehold TEXT NULL,
+    CatSex TEXT NOT NULL,
+    CatAge INT NULL,
+    CatColorPrimary TEXT NULL,
+    CatColorSecondary TEXT NULL,
+    CatColorTertiary TEXT NULL,
+    CatPattern TEXT,
+    CatBreed TEXT,
+    LastModifiedDTS TEXT NOT NULL
 
 	,PRIMARY KEY (CatID)
 );
 
 INSERT INTO ClientCat (
-	CatNM
-    ,CatID
-    ,CatOwner
-    ,CatHousehold
-    ,CatSex
-    ,CatAge
-    ,CatColorPrimary
-    ,CatColorSecondary
-    ,CatColorTertiary
-    ,CatPattern
-    ,CatBreed
-    ,LastModifiedDTS
+	CatNM,
+    CatID,
+    CatOwner,
+    CatHousehold,
+    CatSex,
+    CatAge,
+    CatColorPrimary,
+    CatColorSecondary,
+    CatColorTertiary,
+    CatPattern,
+    CatBreed,
+    LastModifiedDTS
 )
 VALUES
 (

@@ -9,12 +9,12 @@ INSERT INTO CatColor (
 	ColorNM
 ) 
 VALUES
-('black')
-,('white')
-,('grey')
-,('orange')
-,('cream')
-,('orange')
-,('brown');
+    ('black'),
+    ('white'),
+    ('grey'),
+    ('orange'),
+    ('cream'),
+    ('orange'),
+    ('brown');
 
 SELECT * FROM CatColor;

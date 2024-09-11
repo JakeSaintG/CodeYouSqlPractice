@@ -16,71 +16,71 @@ CREATE TABLE CatBreed (
 );
 
 INSERT INTO CatBreed (
-    BreedNM
-    ,Size
-    ,HairLength
-    ,Hypoallergenic
+    BreedNM,
+    Size,
+    HairLength,
+    Hypoallergenic
 )
 VALUES 
 (
-    'Maine Coon'
-    ,'large'
-    ,'long'
-    ,FALSE
+    'Maine Coon',
+    'large',
+    'long',
+    FALSE
 ),
 (
-    'Norwegian Forest Cat'
-    ,'large'
-    ,'long'
-    ,FALSE
+    'Norwegian Forest Cat',
+    'large',
+    'long',
+    FALSE
 ),
 (
-    'Ragdoll'
-    ,'medium'
-    ,'long'
-    ,FALSE
+    'Ragdoll',
+    'medium',
+    'long',
+    FALSE
 ),
 (
-    'Shorthair Siamese'
-    ,'small'
-    ,'short'
-    ,TRUE
+    'Shorthair Siamese',
+    'small',
+    'short',
+    TRUE
 ),
 (
-    'Longhair Siamese'
-    ,'small'
-    ,'long'
-    ,FALSE
+    'Longhair Siamese',
+    'small',
+    'long',
+    FALSE
 ),
 (
-    'Russian Blue'
-    ,'small'
-    ,'short'
-    ,TRUE
+    'Russian Blue',
+    'small',
+    'short',
+    TRUE
 ),
 (
-    'Bengal'
-    ,'medium'
-    ,'short'
-    ,FALSE
+    'Bengal',
+    'medium',
+    'short',
+    FALSE
 ),
 (
-    'Domestic Shorthair'
-    ,'medium'
-    ,'short'
-    ,FALSE
+    'Domestic Shorthair',
+    'medium',
+    'short',
+    FALSE
 ),
 (
-    'Sphynx'
-    ,'medium'
-    ,'none'
-    ,FALSE
+    'Sphynx',
+    'medium',
+    'none',
+    FALSE
 ),
 (
-    'Turkish Angora'
-    ,'medium'
-    ,'varies'
-    ,FALSE
+    'Turkish Angora',
+    'medium',
+    'varies',
+    FALSE
 );
 
 SELECT * FROM CatBreed;

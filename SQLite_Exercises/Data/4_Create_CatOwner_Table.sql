@@ -20,7 +20,7 @@ INSERT INTO CatOwner (
 	OwnerNM
 	,OwnerID 		-- Often times, you may see auto-generated queries or practices that have the comma at the beginning of the line. 
 	,OwnerEmail		-- This is preference and you should follow team dev practices when writing your own queries.
-	,OwnerPhone
+	,OwnerPhone		-- That being said, the front-comma is MY preference so that's how you will see queries moving forward.
 	,HouseholdNM
 )
 VALUES
