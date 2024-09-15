@@ -20,7 +20,6 @@ export const setDbContext = () => {
 export const init = (
     // { defaultData }: { defaultData: any[] } //TODO: ANY; also pass something in
 ) => { 
-    console.log('settin')
     if (!fs.existsSync(FILE_LOCATION)) {
         setDbContext();
         // createAndPopulateContactsTable(defaultData);
