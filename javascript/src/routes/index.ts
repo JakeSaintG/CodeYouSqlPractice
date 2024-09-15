@@ -17,7 +17,7 @@ router.get('/ping', (req: Request, res: Response) => {
     res.send('healthy');
 });
 
-router.use('/exercise-controls', ExerciseControls);
+router.use('/controls', ExerciseControls);
 
 /*
     This bit will catch any errors thrown in our routes.
