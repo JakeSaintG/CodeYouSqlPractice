@@ -1,4 +1,4 @@
-import * as DbUtils from "../data/excercise-controls";
+import * as dbUtils from "../data/exercise-controls";
 import { CheckpointRequest } from "../types/checkpoint-request";
 import { HTTPError } from "../utils/http-error";
 
@@ -24,40 +24,47 @@ export const castObjectToCheckpointRequest = (
 
 export class ExerciseControlsCollection {
     public initExerciseData = () => {
-        DbUtils
+        dbUtils
             .init
             // {defaultData: JsonUtils.readDefaults()} //TODO: fix this
             ();
     };
 
     public setDataToCheckpoint = (input: unknown) => {
-        const checkpointRequest: CheckpointRequest =
-            castObjectToCheckpointRequest(input);
+        const checkpointRequest: CheckpointRequest = castObjectToCheckpointRequest(input);
 
-        const result = this.setDbToCheckpoint(checkpointRequest.exerciseCheckpoint);
+        dbUtils.closeDbConnection();
+        /*
+            Deleting the file seems excessive, right? Quite possibly. However, we want 
+            to completely reset ALL database state. Deleting the file and re-establishing 
+            it ensures that things like stray transactions are closed and that EVERYTHING 
+            in the database is fresh. 
+        */ 
+        dbUtils.deleteDbFile();
+        this.initExerciseData();
+
+        let statementsRun = 1;
+
+        dbUtils.runDropAndReset();
+
+        while (checkpointRequest.exerciseCheckpoint > 0) {
+
+            console.log('Running file...');
+            //get next file from Exercises folder
+
+            // run it if needed // TODO: check for comment in file that allows for skipping a run of SELECT or CHECKPOINT files
+            statementsRun++;
+            // if ( fileName.Contains('CHECKPOINT') ) {
+                checkpointRequest.exerciseCheckpoint--;
+            // }
+        }
 
         return {
-            result: result,
+            result: `${statementsRun} SQL statements were run to set database to desired state`
         };
     };
 
     private setDbToCheckpoint = (checkpoint: number) => {
-        let statementsRun = 0;
 
-        /*
-            get and run DropAndReset from sqlUtils folder
-
-            while (checkpoint > 0) {
-                get next file from Exercises folder
-
-                run it if needed // TODO: check for comment in file that allows for skipping a run of SELECT or CHECKPOINT files
-                    statementsRun++
-
-                if ( fileName.Contains('CHECKPOINT') ) {
-                    checkpoint--; 
-                }
-            }
-        */
-        return `${statementsRun} SQL statements were run to set database to desired state`;
     };
 }
