@@ -3,38 +3,39 @@
     This script should only be run if you are already comfortable with the CREATE in the Data folder or you
     are in a "broken state" and truly need to reset the database. Try to become more familiar with tearing down 
     and rebuilding tables before running this.
-
-    Developer note:
-    This tutorial is built under the assumption that the user is running queries via DB Browser for SQLite.
-    That software handles all actions in a transaction already so putting "BEGIN TRANSACTION" in the query
-    causes an error. If these queries are being run outside of DB Browser for SQLite, it is recommended that
-    they be wrapped in a transaction.
 */
 
 --=================DROP========================================================================================================================================
 
+-- QUERY:
 -- Drop table ONLY if it exists. If it doesn't, nothing will happen.
 DROP TABLE IF EXISTS ClientCat;
 
+-- QUERY:
 -- Drop table ONLY if it exists. If it doesn't, nothing will happen.
 DROP TABLE IF EXISTS CatOwner;
 
+-- QUERY:
 -- Drop table ONLY if it exists. If it doesn't, nothing will happen.
 DROP TABLE IF EXISTS CatBreed;
 
+-- QUERY:
 -- Drop table ONLY if it exists. If it doesn't, nothing will happen.
 DROP TABLE IF EXISTS Veterinarian;
 
+-- QUERY:
 -- Drop table ONLY if it exists. If it doesn't, nothing will happen.
 DROP TABLE IF EXISTS CatColor;
 
 --=================RECREATE========================================================================================================================================
 
+-- QUERY:
 -- Conditionally create CatColor table
 CREATE TABLE IF NOT EXISTS CatColor (
     ColorNM TEXT NOT NULL
 );
 
+-- QUERY:
 -- Conditionally create CatBreed table
 CREATE TABLE IF NOT EXISTS CatBreed (
     BreedNM TEXT NOT NULL
@@ -43,6 +44,7 @@ CREATE TABLE IF NOT EXISTS CatBreed (
 	,Hypoallergenic INT NULL
 );
 
+-- QUERY:
 -- Conditionally create ClientCat table
 CREATE TABLE IF NOT EXISTS ClientCat (
     CatNM TEXT NOT NULL
@@ -60,6 +62,7 @@ CREATE TABLE IF NOT EXISTS ClientCat (
 	,PRIMARY KEY (CatID)
 );
 
+-- QUERY:
 -- Conditionally create CatOwner table
 CREATE TABLE IF NOT EXISTS CatOwner (
     OwnerNM TEXT NOT NULL
@@ -74,9 +77,11 @@ CREATE TABLE IF NOT EXISTS CatOwner (
 --=================INSERT========================================================================================================================================
 -- Queries shorted for easier copy/paste
 
+-- QUERY:
 INSERT INTO CatColor (ColorNM) 
 VALUES ('black'),('white'),('grey'),('orange'),('cream'),('orange'),('brown');
 
+-- QUERY:
 INSERT INTO CatBreed (BreedNM, Size, HairLength, Hypoallergenic)
 VALUES
 ('Maine Coon','large', 'long',FALSE)
@@ -90,6 +95,7 @@ VALUES
 ,('Sphynx','medium', 'none',FALSE)
 ,('Turkish Angora','medium', 'varies',FALSE);
 
+-- QUERY:
 INSERT INTO ClientCat (CatNM, CatID, CatOwner, CatHousehold, CatSex, CatAge, CatColorPrimary, CatColorSecondary, CatColorTertiary, CatPattern, CatBreed, LastModifiedDTS)
 VALUES
 ('Gremlin','5b1522ba-8541-41dc-bd2c-5241d6790711','Christine','SaintG','female',13,'grey','white',NULL,'Grey with locket','Russian Blue',DATE('now'))
@@ -103,6 +109,7 @@ VALUES
 ,('Sassy','55c5e472-0d02-4909-a9a4-76f41576ed6e','Hope','Homeward','female',8,'black','cream','grey','black face, white chest, grey body','Himalayan','2024-05-23')
 ,('Louie','53610afe-5464-442c-9ba2-0ecef0e44180','Mia','Genovia''s Palace','male',20,'black','white',NULL,'tuxedo','domestic shorthair',DATE('now'));
 
+-- QUERY:
 INSERT INTO CatOwner (OwnerNM, OwnerID, OwnerEmail, OwnerPhone, HouseholdNM)
 VALUES
 ('Jake', '8c263069-6c19-4c2e-99db-0287327a24af', 'jake@stgermain.dev', 5555555555, 'SaintG')
