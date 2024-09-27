@@ -14,4 +14,3 @@ load on the host DB is to use code (Powershell, C#, R, Python) to create a tempo
 
 - After everything is settled, the temp table can be safely dropped.
 */
-

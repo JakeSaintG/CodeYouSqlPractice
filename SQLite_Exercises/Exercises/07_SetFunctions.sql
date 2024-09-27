@@ -17,12 +17,3 @@ FROM ClientCat;
 -- Find the number of cats in the ClientCat table by using COUNT(). Use AS to give the result column a different name.
 SELECT COUNT(CatNM) AS NumberOfCats
 FROM ClientCat;
-
--- ===========================================================================================
--- =========================================Distinct==========================================
--- ===========================================================================================
-
--- Find the DISTINCT CatOwners in the ClientCat table. Use AS to give the result column a different name.
-	-- Some people have too many cats...
-SELECT DISTINCT CatOwner AS DistinctOwners
-FROM ClientCat;
