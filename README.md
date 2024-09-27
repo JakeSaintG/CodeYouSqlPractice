@@ -1,6 +1,7 @@
 # demo
 
-
+- meant to be an EXTREMELY simple excericse. 
+- will not be covering best code practices like check-lock-check, optimistic vs pessimistic concurrency, read committed etc
 
 ## DB Browser for SQLite
 ### Installation and download

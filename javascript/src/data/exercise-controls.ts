@@ -20,6 +20,7 @@ export const init = () => {
 export const deleteDbFile = () => {
     fs.unlink(FILE_LOCATION, (err) => {
         if (err) throw err;
+        console.log('Deleting old data.')
     })
 }
 
@@ -30,6 +31,11 @@ export const closeDbConnection = () => {
 export const runDropAndReset = () => {
     const dropAndResetSqlFile = fs.readFileSync('./../SQLite_Exercises/Utils/DropAndReset.sql', 'utf8');
 
+    /*
+        better-sqlite3 cannot run multiple statements at once. In a real-world use case
+        this is a VERY desired behavior for safety. Since there are multiple statements 
+        per file, we need to break them up and run them one at a time.
+    */
     const dropAndResetQueries = dropAndResetSqlFile.split('-- QUERY:');
     
     dropAndResetQueries.forEach((queryString: string) => {
