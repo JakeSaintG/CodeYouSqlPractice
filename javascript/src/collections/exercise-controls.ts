@@ -23,16 +23,25 @@ export const castObjectToCheckpointRequest = (
 };
 
 export class ExerciseControlsCollection {
-    public initExerciseData = () => {
-        dbUtils
-            .init
-            // {defaultData: JsonUtils.readDefaults()} //TODO: fix this
-            ();
-    };
+    public initExerciseData = () => dbUtils.init();
 
     public setDataToCheckpoint = (input: unknown) => {
         const checkpointRequest: CheckpointRequest = castObjectToCheckpointRequest(input);
 
+        this.resetDbFile();
+
+        let statementsRun = 0;
+
+        statementsRun += dbUtils.runDropAndReset();
+
+        statementsRun += dbUtils.runUntilCheckpointReached(checkpointRequest.exerciseCheckpoint);
+
+        return {
+            result: `${statementsRun} SQL statements were run to set database to desired state`
+        };
+    };
+
+    private resetDbFile = () => {
         dbUtils.closeDbConnection();
         /*
             Deleting the file seems excessive, right? Quite possibly. However, we want 
@@ -42,29 +51,5 @@ export class ExerciseControlsCollection {
         */ 
         dbUtils.deleteDbFile();
         this.initExerciseData();
-
-        let statementsRun = 1;
-
-        dbUtils.runDropAndReset();
-
-        while (checkpointRequest.exerciseCheckpoint > 0) {
-
-            console.log('Running file...');
-            //get next file from Exercises folder
-
-            // run it if needed // TODO: check for comment in file that allows for skipping a run of SELECT or CHECKPOINT files
-            statementsRun++;
-            // if ( fileName.Contains('CHECKPOINT') ) {
-                checkpointRequest.exerciseCheckpoint--;
-            // }
-        }
-
-        return {
-            result: `${statementsRun} SQL statements were run to set database to desired state`
-        };
-    };
-
-    private setDbToCheckpoint = (checkpoint: number) => {
-
     };
 }

@@ -9,10 +9,7 @@ export default router;
 
 // If a POST request is made to the "contact" route, save the supplied contact request.
 router.post('/checkpoint', async (req: Request, res: Response) => {
-
     const setResponse = await exerciseRepository.setDataToCheckpoint(req.body);
-    
-
     res.status(201).json(setResponse);
 });
 
