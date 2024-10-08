@@ -4,6 +4,13 @@
 	can be added.
 	In this case, Owners can also have the same IDs with different names. This could be good
 	or bad depending on how you write your software. For this example, we'll leave that PK as is.
+
+	Regarding this change in formating:
+		Often times, you may see auto-generated queries or practices that have the comma at 
+		the beginning of the line. THIS IS PREFERENCE and you should follow your Dev Team's
+		or company's practices when writing queries. That being said, the front-comma is MY 
+		preference so that's how you will see queries moving forward.
+
 */
 
 CREATE TABLE CatOwner (
@@ -18,9 +25,9 @@ CREATE TABLE CatOwner (
 
 INSERT INTO CatOwner (
 	OwnerNM
-	,OwnerID 		-- Often times, you may see auto-generated queries or practices that have the comma at the beginning of the line. 
-	,OwnerEmail		-- This is preference and you should follow team dev practices when writing your own queries.
-	,OwnerPhone		-- That being said, the front-comma is MY preference so that's how you will see queries moving forward.
+	,OwnerID
+	,OwnerEmail		
+	,OwnerPhone
 	,HouseholdNM
 )
 VALUES

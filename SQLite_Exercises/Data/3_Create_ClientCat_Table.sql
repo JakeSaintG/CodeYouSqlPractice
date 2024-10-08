@@ -1,13 +1,14 @@
 /*
     Notice a difference between this CREATE TABLE script and the previous one?
         This time, we want each cat added to this table to be UNIQUE so we will need a primary key.
-        The key will be made up of just the CatID column. If a cat with ID: 123 already exists in
-        the databaseand a user tries to insert a new cat with the same 123 ID, the insert query will fail.
+        The key will be made up of just the CatID column. If a cat with ID: 123 already exists in the 
+        database and a user tries to insert a new cat with the same 123 ID, the insert query will fail.
 
-    Also, it's good practice to keep up with the last time a row was edited. We will be doing so with the LastModifiedDTS
-    (DTS means "Date Time Stamp"). In SQL, there are built in functions like GETDATE() (SQL Server) or DATE('now') (SQLite) 
-    for storing the current date. While other SQL solutions have datetime datatypes, SQLite does not but functions like 
-    DATE('now') work on TEXT, REAL, or INTEGER types. In this case, we will be storing our dates as TEXT type. 
+    Also, it's good practice to keep up with the last time a row was edited. We will be doing so with 
+    the LastModifiedDTS (DTS means "Date Time Stamp"). In SQL, there are built in functions like GETDATE() 
+    (SQL Server) or DATE('now') (SQLite) for storing the current date. While other SQL solutions have 
+    DATETIME datatypes, SQLite does not. HOWEVER, functions like DATE('now') works on TEXT, REAL, or 
+    INTEGER types. In this case, we will be storing our dates as TEXT type. 
 */
 
 CREATE TABLE ClientCat (
