@@ -20,10 +20,6 @@ SELECT *
 FROM ClientCat
 WHERE CatHousehold IN('Genovia''s Palace', 'SaintG') -- The single tick in the first argument is used to escape the tick that belongs in the string.
 
--- ===========================================================================================
--- ==========================================Between==========================================
--- ===========================================================================================
-
 -- We want to target a newsletter at "senior" cats. Show me the cats between ages 10 and 30
 SELECT a.CatAge
 	  ,a.CatNM
