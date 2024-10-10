@@ -1,5 +1,13 @@
--- Statements to add additional cat to our data sets.
--- The API layer would typically handle taking the user inputs from the frontend and constructing the two statements below.
+/******************************************************************************************
+Title: Insert
+
+Query_Type: write
+
+Details:
+We got a new customer! Now we can talk about adding more cats to our existing data. In this case,
+the new user would enter her cat's information in the frontend, the frontend would hand the data
+to the API, and the API would construct the below queries to add the new cat to the database.
+******************************************************************************************/
 
 INSERT INTO CatOwner
 (
@@ -49,11 +57,15 @@ VALUES
 	,DATE('now')
 );
 
-/*
-For simplicity, the Norwegian Forest Cat breed already exists in the CatBreed table.
-This can be the case for a lot of data but, if it weren't, it's possible to retrieve the Norwegian Forest Cat data from an external API.
+/******************************************************************************************
+More:
+For simplicity, the Norwegian Forest Cat breed already exists in the CatBreed table. This can 
+be the case for some data but, if it was not already in our database, it's possible to retrieve 
+the Norwegian Forest Cat data from an external API.
+
 Example:
-Frontend ===request===> CatCatalogAPI ============await============> CatCatalogAPI ===insert===> CatDB
-                                \\                                      ^
+Cat App frontend ===request===> CatAppAPI ==========await==========> CatAppAPI ===insert===> CatDB breed table.
+                            	\\                                      ^
                                  ===request===> CatBreedAPI ===return===^
-*/
+
+******************************************************************************************/

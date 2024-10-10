@@ -20,4 +20,4 @@ SELECT
     CatNM
     ,CatOwner
     ,CatBreed
-FROM ClientCat
+FROM ClientCat;

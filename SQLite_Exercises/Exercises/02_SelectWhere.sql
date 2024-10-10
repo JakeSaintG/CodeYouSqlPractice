@@ -4,9 +4,9 @@ Title: Select Where
 Query_Type: read
 
 Details:
-Let's say that a user logs into the app and wants to update some information on a cat. The 
-username and ID would be part of their request headers to the API layer. The API layer would
-take that information, and constuct the initial view using a WHERE clause.
+Let's say that a user logs into the Cat App and wants to update some information on a cat. The 
+username and ID would be part of their request to the API layer. The API layer would gather that
+data using a WHERE clause and then send it back to the front end of the application.
 
 ******************************************************************************************/
 

@@ -1,4 +1,23 @@
--- Let's expand on WHERE a little bit more. OR was in the last file and AND is also pretty straight forward.
+/******************************************************************************************
+Title: Select Where Continued
+
+Query_Type: read
+
+Details:
+Let's expand on WHERE a little bit more. WHERE can be combined with a small handful of other
+keywords/operators to narrow down the information returned.
+
+******************************************************************************************/
+
+-- A Cat App user, Jake, wants to see all the cats in his household. 
+-- Use OR to find cats owned by Jake or in the 'SaintG household.
+SELECT CatNM
+	  ,CatSex
+	  ,CatAge
+	  ,CatBreed
+FROM ClientCat
+WHERE CatOwner = 'Jake' OR CatHousehold = 'SaintG';
+
 -- Show all cats that have a grey primary color and that are also female.
 SELECT *
 FROM ClientCat
@@ -15,12 +34,20 @@ WHERE CatBreed LIKE '%Shorthair%'
     -- Using '%Shorthair%' means that anything can come before and after 'Shorthair' and are okay with that.
 
 -- Database Admins would point out that AND statements can perform poorly over large data sets. 
--- Use IN to find cats in Debbie's Household and in the St. Germain household.
+-- Let's keep our DBAs happy and use IN to find cats in Genovia's Palace and in the SaintG household.
+-- NOTE: The two single ticks in the first argument is used to escape the tick that belongs in the string.
+	-- https://stackoverflow.com/questions/603572/escape-single-quote-character-for-use-in-an-sqlite-query
 SELECT *
 FROM ClientCat
-WHERE CatHousehold IN('Genovia''s Palace', 'SaintG') -- The single tick in the first argument is used to escape the tick that belongs in the string.
+WHERE CatHousehold IN('Genovia''s Palace', 'SaintG') 
 
--- We want to target a newsletter at "senior" cats. Show me the cats between ages 10 and 30
+/*
+	Let's look at BETWEEN for moment. The next query will expose you to some concepts that will cover more 
+	later but I want you to at least see them now. Don't worry too much about JOIN and GROUP BY yet. Focus
+	mostly on the WHERE clause with the BETWEEN operator in it.
+*/
+
+-- We want to target an in-app newsletter at "senior" cats. Let's target cats between ages 10 and 30
 SELECT a.CatAge
 	  ,a.CatNM
 	  ,a.CatHousehold
@@ -28,6 +55,6 @@ SELECT a.CatAge
 	  ,b.OwnerEmail
 	  ,b.OwnerPhone
 FROM ClientCat a
-JOIN CatOwner b on a.CatOwner = b.OwnerNM -- JOIN before ORDER or GROUP
+JOIN CatOwner b on a.CatOwner = b.OwnerNM -- JOINs go after WHERE and before ORDER BY or GROUP BY
 WHERE CatAge BETWEEN 10 AND 30 
 GROUP BY a.CatHousehold, a.CatOwner, a.CatAge, a.CatNM, b.OwnerEmail, b.OwnerPhone;
