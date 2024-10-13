@@ -69,7 +69,7 @@ VALUES
     'white',
     'Calico',
     'Maine Coon',
-    DATE('now')
+    '2024-01-04'
 ),
 (
     'Cecil',
@@ -120,7 +120,7 @@ VALUES
     'Aristocats',
     'female',
     1,
-    'White',
+    'white',
     NULL,
     NULL,
     'solid',
@@ -153,7 +153,7 @@ VALUES
     NULL,
     'orange with cream stomach',
     'Turkish Angora',
-    DATE('now')
+    '2023-05-23'
 ),
 (
     'Sassy',
