@@ -55,7 +55,7 @@ VALUES
 (
 	'Hope'
 	,'68bc4100-25b4-4861-b23a-d64e24f950ff'
-	,'hope@homewardbound.com'
+	,'hope@gmail.com'
 	,5555555558
 	,'Homeward'
 ),
