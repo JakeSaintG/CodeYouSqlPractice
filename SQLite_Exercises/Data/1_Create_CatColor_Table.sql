@@ -17,7 +17,6 @@ VALUES
     ('grey'),
     ('orange'),
     ('cream'),
-    ('orange'),
-    ('brown');
+    ('orange');
 
 SELECT * FROM CatColor;

@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS CatOwner (
 
 -- QUERY:
 INSERT INTO CatColor (ColorNM) 
-VALUES ('black'),('white'),('grey'),('orange'),('cream'),('orange'),('brown');
+VALUES ('black'),('white'),('grey'),('orange'),('cream'),('orange');
 
 -- QUERY:
 INSERT INTO CatBreed (BreedNM, Size, HairLength, Hypoallergenic)
