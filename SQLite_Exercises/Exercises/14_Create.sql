@@ -1,7 +1,12 @@
-/*
-    This script and the next one will go over the process of adding
-    and using a new table to improve Cat App.
-*/
+/******************************************************************************************
+Title: CREATE
+
+Query_Type: write
+
+Details:
+
+
+******************************************************************************************/
 
 -- Create vet table VetNM, VetLocation, VetID, LastModifiedDTS
 CREATE TABLE Veterinarian (

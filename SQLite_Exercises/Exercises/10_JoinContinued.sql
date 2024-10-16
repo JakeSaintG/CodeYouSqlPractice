@@ -1,6 +1,12 @@
--- ===========================================================================================
--- ======================================Flavors of JOINs=====================================
--- ===========================================================================================
+/******************************************************************************************
+Title: JOINs Continued
+
+Query_Type: read
+
+Details:
+
+
+******************************************************************************************/
 
 -- A RIGHT JOIN will bring everything over from the RIGHT table, even if there isn't a match on the LEFT.
 -- This means that rows will appear to have extra NULLs in it if there's a CatBreed that isn't represented in ClientCat.

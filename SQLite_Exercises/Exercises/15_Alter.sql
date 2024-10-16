@@ -1,3 +1,13 @@
+/******************************************************************************************
+Title: ALTER
+
+Query_Type: write
+
+Details:
+
+
+******************************************************************************************/
+
 -- Now add a VetID column to ClientCat. Make it a big and make it nullable.
 ALTER TABLE ClientCat ADD VetID TEXT NULL;
 -- Depending on your type of SQL, you may need to specify that you are adding a column.

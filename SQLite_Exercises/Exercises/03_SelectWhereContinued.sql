@@ -1,5 +1,5 @@
 /******************************************************************************************
-Title: Select Where Continued
+Title: SELECT WHERE Continued
 
 Query_Type: read
 

@@ -1,3 +1,13 @@
+/******************************************************************************************
+Title: Alter Keys
+
+Query_Type: write
+
+Details:
+
+
+******************************************************************************************/
+
 /*
     Let's say the Veterinarian table start taking a while to query so you've been tasked with
     adding a PRIMARY KEY to the table.
@@ -7,7 +17,7 @@
 ALTER TABLE Veterinarian ADD CONSTRAINT PK_Veterinarian PRIMARY KEY (VetNM, VetID);
 -- NOTE! This will not work on SQLite!!!
 
--- In SQLite, it's not possible to use ALTER to add a PK to an existing table. It's possible to do so with a "migration", though:
+-- In SQLite, it's not possible to use ALTER to add a PK to an existing table. It is possible to do so with a "migration", though:
 
 -- Create a new table with the PRIMARY KEY but named something slightly different:
 CREATE TABLE Veterinarian_NEW

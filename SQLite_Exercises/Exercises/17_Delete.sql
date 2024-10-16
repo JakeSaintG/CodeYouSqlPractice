@@ -1,3 +1,13 @@
+/******************************************************************************************
+Title: DELETE
+
+Query_Type: write
+
+Details:
+
+
+******************************************************************************************/
+
 -- Let's say that client Hope isn't thrilled with our app so she requests that her account is deleted.
 -- We can do some clean up using DELETE if we want to free up space.
 
