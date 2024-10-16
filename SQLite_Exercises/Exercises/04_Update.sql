@@ -12,7 +12,7 @@ one 'Cecil' in bigger data sets.
 
 UPDATE ClientCat
 SET CatBreed = 'Bombay'
-WHERE CatNM LIKE 'Cecil%' AND CatOwner = 'Jake';
+WHERE CatNM LIKE 'Cecil%' AND OwnerID = '8c263069-6c19-4c2e-99db-0287327a24af';
 -- The LIKE statement here serves no purpose. It's just there to show that it can be used.
 
 -- WAIT! We modified an entry in a data! We should probably set the LastModifiedDTS while we're at it.
