@@ -10,10 +10,10 @@ data using a WHERE clause and then send it back to the front end of the applicat
 
 ******************************************************************************************/
 
--- Show the cats that belong to just the user Jake. 
+-- Show the cats that live in the SaintG household. 
 SELECT *
 FROM ClientCat
-WHERE CatOwner = 'Jake';
+WHERE CatHousehold = 'SaintG';
 
 -- Let's trim that down a little.
 SELECT CatNM
@@ -21,20 +21,15 @@ SELECT CatNM
 	  ,CatAge
 	  ,CatBreed
 FROM ClientCat
-WHERE CatOwner = 'Jake';
+WHERE CatHousehold = 'SaintG';
 
-/******************************************************************************************
-More:
-For apps using this database, just pulling names (CatOwner) may cause the wrong info to come
-back. We would want to use a unique ID for the owner so it can be assured that the correct 
-cat owners are selected.
+-- For apps using this database, just pulling households by name may cause the wrong data to come
+-- back. We would want to use a unique ID for the desired SELECTed data so it can be assured
+-- that the correct rows are returned. Let's do that with the Id '8c263069-6c19-4c2e-99db-0287327a24af'.
 
-TODO: actually fix this...put the owner ID or a household ID where it needs to go.
-	- While I'm at it 
-		- TODO: add puor (owner Yamcha) and Kiki's delivery service cat
-
-    - Based on our DB architecture, the OwnerID info is only stored in another table.
-        - A potentially better design would be to not include the CatOwner (name) in the ClientCat table and just have a unique ID.
-        - The CatOwner could be shown by using a JOIN.
-    - Additionally, we could use the CatOwner and OwnerID that come in from the API call to find the CatHousehold and not hard code it.
-******************************************************************************************/
+SELECT CatNM
+	  ,CatSex
+	  ,CatAge
+	  ,CatBreed
+FROM ClientCat
+WHERE OwnerID = '8c263069-6c19-4c2e-99db-0287327a24af';

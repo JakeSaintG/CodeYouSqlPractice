@@ -32,3 +32,5 @@ Tool basics:
 
 **That being said, DB Browser for SQLite doesn't immediately save things to the database. It's important to press "Write Changes" after every query to ensure your changes are persisted to .db file.**
 - db-journal file seems to keep track of those changes
+
+No cats were harmed in the making of this demo.

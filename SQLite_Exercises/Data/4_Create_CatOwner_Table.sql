@@ -65,6 +65,13 @@ VALUES
 	,'mia.thermopolis@palace.ga'
 	,5555555559
 	,'Genovia''s Palace' -- Note! In order to use a ' character in a query, it must be escaped with another ' character. 
+),
+(
+	'Kiki'
+	,'81ea882f-0d56-400e-9884-b159bc8338ed'
+	,'kiki@kikideliveryservice.jp'
+	,5555555560
+	,'delivery service'
 );
 
 SELECT * FROM CatOwner;
