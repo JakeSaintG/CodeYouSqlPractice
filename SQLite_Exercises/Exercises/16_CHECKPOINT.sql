@@ -1,5 +1,11 @@
+-- TODO work on interactivity
+
 -- For your final mission, show me the cat's name, owner, breed, owner phone number, and vet name.
 -- Hint, there will be JOINs! Below is one solution:
+
+
+
+
 
 -- Start by getting everything. Don't worry about specific columns immediately.
 SELECT * 

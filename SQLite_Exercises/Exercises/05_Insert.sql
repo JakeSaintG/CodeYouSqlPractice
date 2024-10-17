@@ -29,26 +29,26 @@ VALUES
 INSERT INTO ClientCat 
 (
 	CatNM
-	,CatID
-    ,CatOwner
+    ,CatID
+    ,OwnerID
     ,CatHousehold
     ,CatSex
-	,CatAge
-	,CatColorPrimary
-	,CatColorSecondary
-	,CatColorTertiary
-	,CatPattern
-	,CatBreed
+    ,CatAge
+    ,CatColorPrimary
+    ,CatColorSecondary
+    ,CatColorTertiary
+    ,CatPattern
+    ,CatBreed
     ,LastModifiedDTS
 )
 VALUES
 (
 	'Boo'
 	,'a3ffddda-7a8f-48a7-a6c6-a10fb9334d81'
-	,'Peggy'
+    ,'1cc7f134-10e9-42d5-aeb2-33659ed815f2'
 	,'The Farm'
 	,'female'
-	,3
+	,4
 	,'black'
 	,NULL
 	,NULL

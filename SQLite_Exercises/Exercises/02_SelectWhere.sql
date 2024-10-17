@@ -7,7 +7,6 @@ Details:
 Let's say that a user logs into the Cat App and wants to update some information on a cat. The 
 username and ID would be part of their request to the API layer. The API layer would gather that
 data using a WHERE clause and then send it back to the front end of the application.
-
 ******************************************************************************************/
 
 -- Show the cats that live in the SaintG household. 
@@ -23,10 +22,10 @@ SELECT CatNM
 FROM ClientCat
 WHERE CatHousehold = 'SaintG';
 
--- For apps using this database, just pulling households by name may cause the wrong data to come
--- back. We would want to use a unique ID for the desired SELECTed data so it can be assured
--- that the correct rows are returned. Let's do that with the Id '8c263069-6c19-4c2e-99db-0287327a24af'.
-
+-- For apps using this database, just pulling a household by name only may cause the wrong
+-- data to be returned . We would want to use a unique ID for the desired data so it can be 
+-- assured that the correct rows are returned. Let's do that with the Id '8c263069-6c19-4c2e-99db-0287327a24af'.
+-- Notice that the OwnerID in the WHERE clause doesn't need to be in the returned columns.
 SELECT CatNM
 	  ,CatSex
 	  ,CatAge

@@ -3,7 +3,6 @@ Title: Checkpoint Exercise!
 
 Details:
 Fix the below queries! Solutions start on line 100 but please try to fix them without looking!
-
 ******************************************************************************************/
 
 -- Query 1:
@@ -23,6 +22,8 @@ VALUES (brown);
 UPDATE CatOwner
 SET OwnerEmail = 'hope@homewardbound.com'
 WHERE 1=1;
+
+
 
 
 

@@ -4,16 +4,22 @@ Title: CREATE
 Query_Type: write
 
 Details:
+If you took a look at the queries that were run to set up the data, you may have noticed
+the CREATE statements in there. Let's look more into those while we "add a new feature" to
+Cat App. It has become worthwhile to create a Veterinarian table in our database. Let's
+create it and populate it with some data.
 
-
+CREATE has as lot of things that it can do but, for right now, we are using it just to make
+a new table. 
 ******************************************************************************************/
 
--- Create vet table VetNM, VetLocation, VetID, LastModifiedDTS
-CREATE TABLE Veterinarian (
-    VetNM TEXT NOT NULL
-    ,VetID TEXT NOT NULL
-    ,VetEmail TEXT NULL
-    ,VetPhone INT NULL
+-- CREATE TABLE requires the table name and then the columns in parentheses. 
+-- Create the Veterinarian table with VetNM, VetLocation, VetID, and LastModifiedDTS columns.
+CREATE TABLE Veterinarian (     
+     VetNM TEXT NOT NULL        -- VetNM is the column name and TEXT is the data type the column will store.
+    ,VetID TEXT NOT NULL 
+    ,VetEmail TEXT NULL         -- NULL or NOT NULL refers to whether or not the database will allow a row's
+    ,VetPhone INT NULL          -- column to be empty. NULL will allow it, NOT NULL will not. 
 );
 
 -- Let's add a few vets to the table.

@@ -15,14 +15,11 @@ This error could be caught using code but it is usually considered best practice
 an error in the first place.
 ******************************************************************************************/
 
-
 DROP TABLE ClientCat;
 DROP TABLE CatOwner;
 DROP TABLE CatBreed;
 DROP TABLE IF EXISTS Veterinarian;
 DROP TABLE CatColor;
-
-
 
 /*
 Why would we want to DROP a table?

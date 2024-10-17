@@ -9,15 +9,14 @@ most commonly run kind as well. It's how a user or software reads data from out 
 
 By SELECT-ing data, you are asking the database to give you back data in whatever shape you
 ask. In the first query, we are asking for all columns to be returned using the * operator. 
-
 ******************************************************************************************/
 
 -- Select EVERYTHING (*) from the ClientCat table
 SELECT * FROM ClientCat;
 
--- Let's narrow it down a little and only request a few columns.
+-- Narrow it down a little and only request that the database only return a few columns.
 SELECT
     CatNM
-    ,CatOwner
+    ,CatHousehold
     ,CatBreed
 FROM ClientCat;

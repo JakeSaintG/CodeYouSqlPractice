@@ -4,31 +4,40 @@ Title: GROUP BY
 Query_Type: read
 
 Details:
+GROUP BY ensures that certain rows are together when the data is returned. The best way to
+understand it is to run a couple queries and see it in action! 
 
-
+For Cat App, the developers are hard at work on a contact list that a vet can use to easily 
+get in touch with clients. Let's look at some of the queries that the backend team would 
+write to create this view/page.
 ******************************************************************************************/
 
--- For the purpose of the contact list, GROUP BY CatOwner
-SELECT CatNM
-	  ,CatOwner
-FROM ClientCat
-GROUP BY CatOwner, CatNM;
+-- One step at a time; let's get the owner data and JOIN the cat data with it.
+SELECT * 
+FROM CatOwner o
+JOIN ClientCat c ON o.OwnerID = c.OwnerID;
 
--- Actually...GROUPing  BY CatHouseHold and then by CatOwner may be more helpful.
-SELECT CatNM,
-	   CatHousehold,
-	   CatOwner
-FROM ClientCat
-GROUP BY CatHousehold, CatOwner, CatNM;
+-- We'll narrow down the fields for now and then group by owner name and then cat name.
+SELECT c.CatNM
+	  ,o.OwnerNM
+FROM CatOwner o
+JOIN ClientCat c ON o.OwnerID = c.OwnerID
+GROUP BY o.OwnerNM, c.CatNM;
 
--- Now add in the contact info from the CatOwner table! 
--- You may notice a and b. "a" is an Alias for the ClientCat table and "b" is for CatOwner.
--- Sometimes, columns end up having the same name and alias' end up required. Ex: if "a.CatOwner = b.CatOwner"
-SELECT a.CatNM
-	  ,a.CatHousehold
-	  ,a.CatOwner
-	  ,b.OwnerEmail
-	  ,b.OwnerPhone
-FROM ClientCat a
-JOIN CatOwner b on a.CatOwner = b.OwnerNM -- JOIN before ORDER or GROUP
-GROUP BY a.CatHousehold, a.CatOwner, a.CatNM, b.OwnerEmail, b.OwnerPhone;
+-- Actually...GROUPing BY CatHouseHold and then by CatOwner may be more helpful.
+SELECT c.CatHousehold
+      ,c.CatNM
+	  ,o.OwnerNM
+FROM CatOwner o
+JOIN ClientCat c ON o.OwnerID = c.OwnerID
+GROUP BY c.CatHousehold, o.OwnerNM, c.CatNM;
+
+-- Now return the remaining columns that may be necessary in a contact list!
+SELECT c.CatNM
+	  ,c.CatHousehold
+	  ,o.OwnerNM
+	  ,o.OwnerEmail
+	  ,o.OwnerPhone
+FROM CatOwner o
+JOIN ClientCat c ON o.OwnerID = c.OwnerID
+GROUP BY c.CatHousehold, o.OwnerNM, c.CatNM, OwnerEmail, OwnerPhone;
