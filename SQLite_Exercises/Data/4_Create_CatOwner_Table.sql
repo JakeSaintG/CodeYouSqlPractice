@@ -71,7 +71,7 @@ VALUES
 	,'81ea882f-0d56-400e-9884-b159bc8338ed'
 	,'kiki@kikideliveryservice.jp'
 	,5555555560
-	,'delivery service'
+	,'Delivery Service'
 );
 
 SELECT * FROM CatOwner;
