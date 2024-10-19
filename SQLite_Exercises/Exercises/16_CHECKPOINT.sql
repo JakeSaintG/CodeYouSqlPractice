@@ -6,7 +6,6 @@
 
 
 
-
 -- Start by getting everything. Don't worry about specific columns immediately.
 SELECT * 
 FROM ClientCat a

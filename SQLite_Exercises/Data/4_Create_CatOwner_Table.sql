@@ -1,17 +1,9 @@
-/*
-	Note how this table's PK contains two columns? This means rows can be inserted if there is
-	someone with the same NAME or ID but not both. If Jim with ID 123 exists, Jim with ID 456 
-	can be added.
-	In this case, Owners can also have the same IDs with different names. This could be good
-	or bad depending on how you write your software. For this example, we'll leave that PK as is.
-
-	Regarding this change in formating:
-		Often times, you may see auto-generated queries or practices that have the comma at 
-		the beginning of the line. THIS IS PREFERENCE and you should follow your Dev Team's
-		or company's practices when writing queries. That being said, the front-comma is MY 
-		preference so that's how you will see queries moving forward.
-
-*/
+/******************************************************************************************
+	Often times, you may see auto-generated queries or dev practices that have the comma at 
+	the beginning of a line. THIS IS PREFERENCE and you should follow your Dev Team's or
+	company's practices when writing queries. That being said, the front-comma is MY 
+	preference so that's how you will see queries moving forward.
+******************************************************************************************/
 
 CREATE TABLE CatOwner (
     OwnerNM TEXT NOT NULL

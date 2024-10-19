@@ -4,7 +4,7 @@ Title: ALTER
 Query_Type: write
 
 Details:
-Now that we have our Vet table, let create some relations to the other tables so we can
+Now that we have our Vet table, let's create some relations to the other tables so we can
 tie our cats and cat owners to which vet they use. We'll start by adding a VetID table 
 to ClientCat and then add Vet data by Household.
 

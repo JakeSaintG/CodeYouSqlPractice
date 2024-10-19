@@ -14,9 +14,9 @@ Details:
 -- Let's remove Hope's cat from the ClientCat table first.
 DELETE 
 FROM ClientCat 
-WHERE CatOwner = 'Hope';
+WHERE CatNM = 'Louie';
 
--- Though... The above statement would delete everyone in the DB that is named Hope. 
+-- Though... The above statement would delete cat in the DB that is named Hope. 
 -- It would probably be best to use Hope's ID when deleting her data. Let's do that for the CatOwner table.
 DELETE
 FROM CatOwner

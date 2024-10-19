@@ -46,7 +46,6 @@ WHERE CatBreed LIKE '%Shorthair%';
 	later but it would be good to at least see them now. Don't worry too much about JOIN and 
 	GROUP BY yet. Focus mostly on the WHERE clause with the BETWEEN operator in it.
 */
-
 -- We want to target an in-app newsletter at "senior" cats. Let's target cats between ages 10 and 30
 SELECT a.CatAge
 	  ,a.CatNM

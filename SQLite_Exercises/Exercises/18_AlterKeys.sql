@@ -5,7 +5,7 @@ Query_Type: write
 
 Details:
 Let's say the Veterinarian table start taking a while to query so you've been tasked with
-adding a PRIMARY KEY to the table.
+updating the PRIMARY KEY to include VetNM.
 
 This is something that can be done in other most SQL technologies with an ALTER statement. 
 Here's an example using T-SQL on SQL Server:
@@ -16,7 +16,7 @@ In SQLite, it's not possible to use ALTER to add a PK to an existing table...but
 quitters! It is possible to do so with a "migration" of sorts, though.
 
 Migration plan:
-    - Create a new Veterinarian table with the PK.
+    - Create a new Veterinarian table with the updated PK.
     - Copy the data into the new table using the existing data. (INSERT with SELECT)
     - Once copied, drop the old Veterinarian table. (This will delete the old table)
     - Rename the new table to just "Veterinarian".

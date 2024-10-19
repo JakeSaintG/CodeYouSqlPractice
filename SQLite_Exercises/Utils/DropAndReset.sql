@@ -1,11 +1,12 @@
-/*
+/******************************************************************************************
     Student note: 
-    This script should only be run if you are already comfortable with the CREATE in the Data folder or you
-    are in a "broken state" and truly need to reset the database. Try to become more familiar with tearing down 
-    and rebuilding tables before running this.
-*/
+    This script should only be run if you are already comfortable with all or most of the
+    scripts in the Exercises folder. This script should serve as a "last resort" to be run 
+    if you in are in a "broken state" and truly need to reset the database. Try to become
+    more familiar with tearing down and rebuilding tables before running this.
+******************************************************************************************/
 
---=================DROP========================================================================================================================================
+--=================DROP====================================================================
 
 -- QUERY:
 -- Drop table ONLY if it exists. If it doesn't, nothing will happen.
@@ -27,7 +28,7 @@ DROP TABLE IF EXISTS Veterinarian;
 -- Drop table ONLY if it exists. If it doesn't, nothing will happen.
 DROP TABLE IF EXISTS CatColor;
 
---=================RECREATE========================================================================================================================================
+--=================RECREATE================================================================
 
 -- QUERY:
 -- Conditionally create CatColor table
@@ -74,7 +75,7 @@ CREATE TABLE IF NOT EXISTS CatOwner (
 	,PRIMARY KEY (OwnerNM, OwnerID)
 );
 
---=================INSERT========================================================================================================================================
+--=================INSERT==================================================================
 -- Queries shortened for easier copy/paste
 
 -- QUERY:

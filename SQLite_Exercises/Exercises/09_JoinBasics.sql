@@ -26,7 +26,7 @@ FROM ClientCat
 JOIN CatBreed ON CatBreed = BreedNM;
 
 -- Also, with the power of JOINs, we can use the OwnerID to put an owner name to each cat's name.
--- Note! This query is expected to break. Run it anyway and check out the error message.
+-- Note! THIS QUERY IS EXPECTED TO BREAK. Run it anyway and check out the error message.
 SELECT 
      CatNM
     ,OwnerNM

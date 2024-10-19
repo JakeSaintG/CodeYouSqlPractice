@@ -1,4 +1,4 @@
-/*
+/******************************************************************************************
     SQLite doesn't have a Boolean or Bit datatype. When needing to do something TRUE/FALSE,
     use an INT and set it to 0 (false) or 1 (true). 
     
@@ -6,13 +6,13 @@
     an INT column.
 
     There are other fun tricks you can do with SQLite types but we'll keep simple for now.
-*/
+******************************************************************************************/
 
 CREATE TABLE CatBreed (
     BreedNM TEXT NOT NULL,
     Size TEXT NULL,
 	HairLength TEXT NULL,
-	Hypoallergenic INT NULL
+	Hypoallergenic INT NULL  -- This column will be an INT datatype but used for TRUE/FALSE values.
 );
 
 INSERT INTO CatBreed (
@@ -26,7 +26,7 @@ VALUES
     'Maine Coon',
     'large',
     'long',
-    FALSE
+    FALSE                    -- We declared this an INT datatype column but can INSERT a boolean value.
 ),
 (
     'Norwegian Forest Cat',
