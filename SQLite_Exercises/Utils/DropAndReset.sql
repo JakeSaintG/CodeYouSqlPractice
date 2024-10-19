@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS CatOwner (
 );
 
 --=================INSERT========================================================================================================================================
--- Queries shorted for easier copy/paste
+-- Queries shortened for easier copy/paste
 
 -- QUERY:
 INSERT INTO CatColor (ColorNM) 
