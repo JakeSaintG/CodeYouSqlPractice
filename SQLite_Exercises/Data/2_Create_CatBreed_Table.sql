@@ -4,8 +4,6 @@
     
     HOWEVER! SQLite is smart enough to know how to handle TRUE or FALSE when inserting into
     an INT column.
-
-    There are other fun tricks you can do with SQLite types but we'll keep simple for now.
 ******************************************************************************************/
 
 CREATE TABLE CatBreed (

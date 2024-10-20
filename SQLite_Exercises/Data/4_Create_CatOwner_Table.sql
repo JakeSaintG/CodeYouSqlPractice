@@ -11,6 +11,7 @@ CREATE TABLE CatOwner (
     ,OwnerEmail TEXT NULL
 	,OwnerPhone INT NULL
 	,HouseholdNM TEXT NULL
+	,LastModifiedDTS TEXT NOT NULL
 
 	,PRIMARY KEY (OwnerNM, OwnerID)
 );
@@ -21,6 +22,7 @@ INSERT INTO CatOwner (
 	,OwnerEmail		
 	,OwnerPhone
 	,HouseholdNM
+	,LastModifiedDTS
 )
 VALUES
 (
@@ -29,6 +31,7 @@ VALUES
 	,'jake@stgermain.dev'
 	,5555555555
 	,'SaintG'
+	,DATE('now')
 ),
 (
 	'Christine'
@@ -36,6 +39,7 @@ VALUES
 	,'christine@example.com'
 	,5555555556
 	,'SaintG'
+	,DATE('now')
 ),
 (
 	'Adelaide Bonfamille'
@@ -43,6 +47,7 @@ VALUES
 	,'adelaide@aristocats.com'
 	,5555555557
 	,'Aristocats'
+	,DATE('now')
 ),
 (
 	'Hope'
@@ -50,6 +55,7 @@ VALUES
 	,'hope@gmail.com'
 	,5555555558
 	,'Homeward'
+	,DATE('now')
 ),
 (
 	'Mia'
@@ -57,6 +63,7 @@ VALUES
 	,'mia.thermopolis@palace.ga'
 	,5555555559
 	,'Genovia''s Palace' -- Note! In order to use a ' character in a query, it must be escaped with another ' character. 
+	,DATE('now')
 ),
 (
 	'Kiki'
@@ -64,6 +71,7 @@ VALUES
 	,'kiki@kikideliveryservice.jp'
 	,5555555560
 	,'Delivery Service'
+	,DATE('now')
 );
 
 SELECT * FROM CatOwner;
