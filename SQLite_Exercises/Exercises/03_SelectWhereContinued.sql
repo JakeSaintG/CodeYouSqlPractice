@@ -4,12 +4,12 @@ Title: SELECT WHERE Continued
 Query_Type: read
 
 Details:
-Let's expand on WHERE a little bit more. WHERE can be combined with a small handful of other
+Let's expand on WHERE a little bit more. WHERE can be combined with a handful of other
 keywords/operators to narrow down the information returned.
 ******************************************************************************************/
 
 -- A Cat App user, Jake, wants to see all the cats in his household. 
--- Use OR to find cats owned by Jake or in the 'SaintG household.
+-- Use OR to find cats owned by Jake or in the 'SaintG' household.
 -- "8c263069-6c19-4c2e-99db-0287327a24af" is Jake's UniqueID
 SELECT CatNM
 	  ,CatSex
@@ -18,7 +18,8 @@ SELECT CatNM
 FROM ClientCat
 WHERE OwnerID = '8c263069-6c19-4c2e-99db-0287327a24af' OR CatHousehold = 'SaintG';
 
--- Show all cats that have a gray primary color and that are also female.
+-- AND will return data that meets BOTH of the supplied conditions.
+-- Show all cats that have a gray primary color AND that are also female.
 SELECT *
 FROM ClientCat
 WHERE CatSex = 'female' AND CatColorPrimary = 'gray';
