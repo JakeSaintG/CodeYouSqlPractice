@@ -5,14 +5,15 @@ Query_Type: read
 
 Details:
 SQLite is a RELATIONAL database. This allows us to keep seperate ideas in different tables,
-like cats and owners, but be able to connect that data when needed. JOINs let us do just that.ABORT
+like cats and owners, while being able to connect that data when needed. JOINs let us do that
+by connecting the tables with common data and returning information from all JOINed tables.
 
 To join the data in two tables together, the statement must be done ON a column that the two tables
-share. The JOIN clause must come after the FROM clause.
+share. The JOIN clause must also come after the FROM clause.
 ******************************************************************************************/
 
 -- Sometimes, SELECT * is a very valid way to get started.
--- Give me EVERYTHING from ClientCat and its corresponding data in CatBreed.
+-- Give us EVERYTHING from ClientCat and its corresponding data in CatBreed.
 SELECT *
 FROM ClientCat
 JOIN CatBreed ON CatBreed = BreedNM;
@@ -33,7 +34,6 @@ SELECT
 	,OwnerID
 FROM ClientCat
 JOIN CatOwner ON OwnerID = OwnerID;
-
 
 -- Both tables have an "OwnerID" column so you get an "ambiguous column name" error.
 -- We can fix this by using dot notation in the ON to specify which OwnerID is which.

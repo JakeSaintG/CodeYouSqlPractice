@@ -15,7 +15,7 @@ We'll also use AS to make these derived columns make more sense. It's called an 
 SELECT MAX(CatAge)
 FROM ClientCat;
 
--- Our query came back with a column named "MAX(CatAge)" or "column_name" and I don't love that.
+-- The above query came back with a column named "MAX(CatAge)" or "column_name" and I don't love that.
 -- We can use AS here to give the result column a different name.
 SELECT MAX(CatAge) AS OldestCat
 FROM ClientCat;

@@ -14,9 +14,9 @@ table with matching or non-existent data in the other.
 INNER JOINs - Returns data from both tables and excludes data that doesn't match up.
 OUTER JOINs - Will also return data that is matching but OUTER joins also return data that does NOT match.
     LEFT OUTER JOIN - Returns all rows of a table on the LEFT side of the join. 
-        - For the rows for which there is no matching row on the RIGHT, those result rows will return as NULL.
+        - For the rows with no matching row on the RIGHT, those result rows will return as NULL.
     RIGHT OUTER JOIN - Returns all rows of a table on the RIGHT side of the join. 
-        - For the rows for which there is no matching row on the LEFT, those result rows will return as NULL.
+        - For the rows with no matching row on the LEFT, those result rows will return as NULL.
 ******************************************************************************************/
 
 -- An INNER JOIN will only bring in details that match in both tables.

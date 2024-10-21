@@ -17,7 +17,7 @@ SELECT *
 FROM CatOwner o
 JOIN ClientCat c ON o.OwnerID = c.OwnerID;
 
--- We'll narrow down the fields for now and then group by owner name and then cat name.
+-- We'll narrow down the fields for now and then GROUP BY owner name and then cat name.
 SELECT c.CatNM
 	  ,o.OwnerNM
 FROM CatOwner o

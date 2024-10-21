@@ -6,7 +6,7 @@ Query_Type: read
 Details:
 The ORDER BY clause is pretty self explanatory. It allows us to return our data in a certain
 ORDER based on the columns provided. It usually is used with the ASC (ascending) and DESC
-(descending) keywords. These determine the direction that the ORDER is in.
+(descending) keywords. These determine the direction that the return data is ORDERed is in.
 ******************************************************************************************/
 
 -- Ages are a good way to visualize how ASC and DESC work.
@@ -18,7 +18,7 @@ ORDER BY CatAge DESC;
 -- ORDER BY CatAge from lowest to highest (ascending)
 SELECT * 
 FROM ClientCat
-ORDER BY CatAge DESC;
+ORDER BY CatAge ASC;
 
 -- ORDER BY CatAge from highest to lowest (ascending), then ORDER BY LastModifiedDTS since there are some cats that are the same ages.
 -- Example: Four cats are listed as being 1 year old.
