@@ -43,3 +43,13 @@ DROP TABLE IF EXISTS Veterinarian;
 ALTER TABLE Veterinarian_NEW RENAME TO Veterinarian;
 
 -- Congrats! You migrated an existing table to have a new property while keeping the data.
+
+/******************************************************************************************
+Note how this table's PK now contains two columns? This means rows can be inserted if there
+is someone with an existing NAME or ID but not both. If Vet Jim with an ID of 123 exists,
+Jim with an ID of 456 can be added.
+
+In this case, Vets can also accidentally end up with the same IDs with different names. This
+could be fine or bad depending on how you write your software. For this example, we'll leave
+that PK as is and tell the backend team to be careful.
+******************************************************************************************/
