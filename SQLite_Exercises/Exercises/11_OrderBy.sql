@@ -28,4 +28,4 @@ SELECT CatAge
 	  ,CatNM
 	  ,LastModifiedDTS
 FROM ClientCat
-ORDER BY CatAge, LastModifiedDTS ASC;
+ORDER BY CatAge ASC, LastModifiedDTS ASC;
