@@ -9,7 +9,7 @@ Bonus goal 1: In descending order, return data by cat age.
 - Hint: It's possible to ORDER BY something that is not part of the SELECT.
 
 Bonus goal 2: Group by CatHousehold, then the owner's name, and finally the cat's name. 
-- Hint: GROUP goes before ORDER in your statement: SELECT, FROM, JOINs, GROUP, ORDER
+- Reminder: GROUP goes before ORDER in your statement: SELECT, FROM, JOINs, GROUP, ORDER
 
 Return all of that information using a single query.
 ******************************************************************************************/
