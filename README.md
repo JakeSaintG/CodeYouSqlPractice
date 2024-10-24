@@ -1,36 +1,50 @@
-# demo
-
-- meant to be an EXTREMELY simple excericse. 
-- will not be covering best code practices like check-lock-check, optimistic vs pessimistic concurrency, read committed etc
-
-## DB Browser for SQLite
-### Installation and download
-- windows
-    - https://sqlitebrowser.org
-    - msi
-    - agree to terms
-    - Don't be too concerned about SQLCipher
-        - see img
-    - choose install location
-    - install
-
-### How To:
-We won't be diving too hard into the features of this tool. For our purposes, we just want to view and query the SQLite database. 
-
-Don't worry too much about creating the database with the tool. There's code for that.
-
-Tool basics:
-- Database Structure
-    - Refresh
-    - View columns
-- Execute SQL
-    - Where we will be spending the bulk of our time
-    - new table
-    - execute
-        - highlighting
+# Code:YOU SQLite Demo and Exercises
+Welcome! In this repo, we will go over everything you need to know to get a solid foundation of using databases with SQL. We will be focusing on writing and running queries against CatDB. 
 
 
-**That being said, DB Browser for SQLite doesn't immediately save things to the database. It's important to press "Write Changes" after every query to ensure your changes are persisted to .db file.**
-- db-journal file seems to keep track of those changes
+- not covering code
+    - The topics covered here can help you write better, more informed code against SQLite databases
+
+
+## SQL Terminology
+
+While it is best to use these exercises to solidify your SQL understanding, 
+
+check Terminology.md
+
+
+
+
+## Recommended Tools
+These exercises will not require an extensive knowledge base for using available tools. For our purposes, we just want to view and query the SQLite database. 
+
+### SQLite Extension
+The recommended tool to complete these exercises would be a popular [SQLite extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite) for VSCode:
+- ![extension search result](./other/README_Imgs/extension.png)
+- This extension will allow us to open a connection to CatDB and easily run SQL queries.
+
+### DB Browser for SQLITE
+An alternative tool would be [DB Browser for SQLite](https://sqlitebrowser.org).
+- WARNING: This tool can get a bit confusing for new users since it utilizes a db-journal file and has a save feature. You are not technically running queries directly against the database.
+- It is available to download for Mac, Windows, and Linux.
+
+## Repository Structure
+- CatDB.db file
+
+- SQLite_Exercises directory
+
+    - Data directory
+
+    - Exercises directory
+
+    - Utils directory
+
+
+## Advice
+
+
+
+
+
 
 No cats were harmed in the making of this demo.
