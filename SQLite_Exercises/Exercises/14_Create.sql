@@ -64,3 +64,21 @@ VALUES
     ,5555555573
     ,DATE('now')
 );
+
+-- Let's test that PRIAMRY KEY by trying to run the below statement.
+-- We should see this PRIAMRY KEY violation error: UNIQUE constraint failed
+INSERT INTO Veterinarian (
+    VetNM
+    ,VetID
+    ,VetEmail
+    ,VetPhone
+    ,LastModifiedDTS
+)
+VALUES
+(
+    'Dr. Raphael'
+    ,'5240755a-6756-4122-b189-fa1d04e4347d'
+    ,'raph@example.com'
+    ,5555555573
+    ,DATE('now')
+);
