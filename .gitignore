@@ -1,0 +1,5 @@
+CatDb.db
+CatDb.db-journal
+node_modules
+bin
+obj
