@@ -55,6 +55,6 @@ SELECT a.CatAge
 	  ,b.OwnerEmail
 	  ,b.OwnerPhone
 FROM ClientCat a
-JOIN CatOwner b on a.OwnerID = b.OwnerID -- JOINs go after WHERE and before ORDER BY or GROUP BY
+JOIN CatOwner b on a.OwnerID = b.OwnerID -- JOINs go before WHERE and ORDER BY or GROUP BY
 WHERE CatAge BETWEEN 10 AND 30 
 GROUP BY a.CatHousehold, b.OwnerNM, a.CatAge, a.CatNM, b.OwnerEmail, b.OwnerPhone;
