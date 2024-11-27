@@ -21,7 +21,7 @@ An alternative tool would be [DB Browser for SQLite](https://sqlitebrowser.org).
 
 ### Getting Started
 - The included CatDB.db file is our entire database in a nice, portable package.
-- If using the SQLite extension, after installation, right click on the CatDB.db file and select `Open Database`.
+- If you are using the SQLite extension, after installation, right click on the CatDB.db file and select `Open Database`.
     - ![open DB file prompt](./README_Imgs/open_db.png)
     - Once the database has been opened, you should see...NOTHING! The included database is empty because you will be populating it as part of the exercises.
         - Check out the new collapsable menu in the explorer panel.
@@ -32,6 +32,9 @@ An alternative tool would be [DB Browser for SQLite](https://sqlitebrowser.org).
         - ![query window](./README_Imgs/query_window.png)
     - Running a query is as easy as right clicking in the "white space" and selecting `Run Query`.
         - ![run query prompt](./README_Imgs/run_query.png)
+        - You'll notice that there are `Run Query` and `Run Selected Query` options. There is a minor difference that's important to know about.
+            - `Run Query` - This will run all queries on the file or query window. It's common to have multiple queries in a file/window so, if you select this, make sure you're okay with all of the queries being run.
+            - `Run Selected Query` - This good for running a single query in a window/file with multiple queries. To select the query to run, either highlight the whole query or just right click on the desired query.
 
 ## Repository Structure
 - `CatDB.db` is our entire database in one file! 
