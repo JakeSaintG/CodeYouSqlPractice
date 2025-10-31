@@ -17,6 +17,7 @@ INSERT INTO CatOwner
 	,OwnerEmail
 	,OwnerPhone
 	,HouseholdNM
+    ,LastModifiedDTS
 )
 VALUES
 (
@@ -25,6 +26,7 @@ VALUES
 	,'pegleg@example.com'
 	,5555555562
 	,'The Farm'
+    ,DATE('now')
 );
 
 INSERT INTO ClientCat 
